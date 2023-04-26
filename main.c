@@ -15,15 +15,11 @@
 extern SW_t Switch_AstrSwitchState[SW_NUM];
 int main(void)
 {
-u8 PinState;
+
 DIO_enuInit();
 Switch_enuInit(Switch_AstrSwitchState);
-	while (1)
+while (1)
 	{
-	Switch_enuGetState(&Switch_AstrSwitchState[0],&PinState);
-	if(PinState==0)
-		{
-		DIO_enuSetPinValue(DIO_u8PORTA,DIO_u8PIN0,DIO_HIGH);
-		}else {DIO_enuSetPinValue(DIO_u8PORTA,DIO_u8PIN0,DIO_LOW);}
+	
 	}
 }
